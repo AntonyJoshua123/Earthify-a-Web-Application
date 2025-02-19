@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthify</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./earthbg2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #daffe2; /* Dark green text */
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 270px;
+            margin: 0;
+        }
+        .tagline {
+            font-size: 3vh;
+            margin: 0;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            font-size: 2vh;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #155724; /* Dark green button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0c3c20; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Earthify</h1>
+        <p class="tagline">Empowering the next generation to take small steps for a
+            greener future—one task at a time! </p>
+        <div class="buttons">
+            <button onclick="location.href='user.html'">User</button>
+            <button onclick="location.href='teacher.html'">Teacher</button>
+        </div>
+    </div>
+</body>
+</html>
