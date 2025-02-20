@@ -7,7 +7,7 @@
 
  // Your web app's Firebase configuration
  const firebaseConfig = {
-    apiKey: "AIzaSyDDYp7vmd_cz0YObFTI9rlOgHkh9m93GXo",
+    apikey:  process.env.FIREBASE_API_KEY,
     authDomain: "login-page-15ae5.firebaseapp.com",
     databaseURL: "https://login-page-15ae5-default-rtdb.firebaseio.com",
     projectId: "login-page-15ae5",
