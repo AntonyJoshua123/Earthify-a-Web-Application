@@ -7,6 +7,14 @@ body {
     height: 100vh;
     margin: 0;
 }
+body {
+    background-image: url('login1.png'); /* Path to your image */
+    background-size: cover; /* Makes sure the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    font-family: Arial, sans-serif;
+    color: white; /* Adjust text color to contrast with the image */
+}
 
 .signin-container {
     background-color: white;
