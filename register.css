@@ -8,6 +8,7 @@ body {
     margin: 0;
 }
 body {
+    position:relative;
     background-image: url('login1.png'); /* Path to your image */
     background-size: cover; /* Makes sure the image covers the entire page */
     background-position: center; /* Centers the image */
@@ -15,9 +16,20 @@ body {
     font-family: Arial, sans-serif;
     color: white; /* Adjust text color to contrast with the image */
 }
+body::after {
+    content: ''; /* Create the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Set the overlay's opacity */
+    z-index: -1;
+}
 
 .signin-container {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.29);
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
