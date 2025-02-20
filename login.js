@@ -6,7 +6,7 @@ import { getDatabase, ref, get, query, orderByChild, equalTo, update, serverTime
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    
+    apikey:  process.env.FIREBASE_API_KEY2,
     authDomain: "login-page-15ae5.firebaseapp.com",
     databaseURL: "https://login-page-15ae5-default-rtdb.firebaseio.com",
     projectId: "login-page-15ae5",
