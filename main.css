@@ -105,7 +105,7 @@ body {
 
 .task-box {
   position: relative;
-  width: 290px;
+  width: 290px;px;
   height: 200px;
   display: flex;
   justify-content: center;

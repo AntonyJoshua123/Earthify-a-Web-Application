@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Natural Air Freshener
+    </title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif; /* System UI font */
+            margin: 0;
+            background-image: url('giphy.gif'); /* Replace with your background image URL */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-size: cover; /* Make the image cover the entire page */
+            background-position: center; /* Center the background image */
+            height: 100vh; /* Full height of the viewport */
+            color: #B8E192; /* Light color for text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden; /* Prevent scrolling */
+            position: relative; /* For absolute positioning of background elements */
+        }
+        .curved-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Limit the width for better layout */
+    height: 90%; /* Full height with some margin */
+    border-radius: 14px; /* Curved corners */
+    overflow: hidden; /* Ensure content fits within the box */
+    background: transparent; /* Fully transparent background */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    position: relative; /* For positioning child elements */
+    z-index: 1; /* Ensure container is above background elements */
+    border: 5px solid #68BA81; /* Border for added definition */
+    animation: bounceIn 1s ease; /* Bounce-in animation */
+}
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        h1 {
+            font-size: 3em; /* Larger font size for the heading */
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px #439CAE; /* Shadow effect for emphasis */
+            animation: fadeIn 1s ease-in; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .image-container {
+            flex: 1; /* Take up equal space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px; /* Space between image and description */
+            animation: slideInLeft 0.5s ease; /* Slide-in animation */
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for the image */
+            transition: transform 0.3s; /* Smooth hover effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for image */
+        }
+        .image-container img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+        .description {
+            flex: 1; /* Take up equal space */
+            font-size: 1.5em; /* Larger font for description */
+            line-height: 1.5; /* Better readability */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for description */
+            color: #1A4F4C; /* Dark text color for contrast */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for description box */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            animation: popIn 0.5s ease; /* Pop-in animation */
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .description b {
+            font-weight: bold;
+        }
+        /* Decorative Background Elements */
+        .leaf {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 0; /* Behind the container */
+            animation: float 6s ease-in-out infinite; /* Floating animation */
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .leaf:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            transform: rotate(30deg);
+        }
+        .leaf:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            transform: rotate(-30deg);
+        }
+        .leaf:nth-child(3) {
+            bottom: 10%;
+            left: 20%;
+            transform: rotate(60deg);
+        }
+        .leaf:nth-child(4) {
+            bottom: 15%;
+            right: 10%;
+            transform: rotate(-60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="curved-box">
+        <h1> Natural Air Freshener
+        </h1>
+        <div class="content">
+            <div class="image-container">
+                <img src="task2.png" alt="Plant Pot Image"> <!-- Replace with your image URL -->
+            </div>
+            <div class="description">
+                <p><b>Task:</b> Make a chemical-free air freshener using natural ingredients.
+                </p>
+                <p><b>Tip:</b> Mix baking soda with a few drops of essential oils (like lemon or lavender) and place it in a small jar with holes in the lid.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
