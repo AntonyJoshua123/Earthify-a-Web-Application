@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -5,6 +6,8 @@ body {
   background-color: #f0f0f0;
   overflow: hidden;
 }
+
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -17,6 +20,7 @@ body {
   z-index: 1000;
   height: 50px;
 }
+
 .threecircles {
   justify-content: flex-end;
   display: flex;
@@ -24,38 +28,31 @@ body {
   margin-left: auto;
   gap: 10px;
 }
-.task-counter {
-  background-color: #ffcc00;
-  color: black;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 14px;
-  margin-left: 15px;
-}
-.score{
-  height: 50px;
-}
+
 #completed-tasks-count {
   display: flex;
   justify-content: center;
-  align-items: center; /* Ensures tree and number align properly */
+  align-items: center;
   gap: 7px;
   color: white;
 }
+
 .navbar .circle {
   width: 50px;
   height: 50px;
   background-color: white;
   border-radius: 50%;
   margin-left: 10px;
+  cursor: pointer;
 }
-.profile{
+
+.profile {
   height: 100%;
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .welcome-text {
   position: fixed;
   top: 10;
@@ -67,53 +64,42 @@ body {
   z-index: 1000;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.container{
+
+/* Main Container */
+.main-container {
   display: flex;
-  height: calc( 100vh - 100px);
-  padding-top: 90px; /* to account for fixed navbar and welcome text */
-  overflow-y: scroll;
-  gap: 20px;
-  background-color: #b8e192;
-}
-.tasks {
-  width: 65%;
-  margin: 5px;
-  background-color: #68BA81; 
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  justify-content: center;
-  overflow-y: auto; /* Enables scrolling inside */
-  max-height: 80vh; /* Adjust height */
-  position: relative;
+  height: calc(100vh - 50px); /* Subtract navbar height */
+  padding-top: 70px; /* Account for fixed navbar */
 }
 
-/* Background applied only to scrollable area */
-.tasks::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  border-radius: 12px;
+/* Tasks Container */
+.tasks-container {
+  width: 70%;
+  background-color: #b8e192;
+  padding: 20px;
+  overflow-y: auto; /* Make tasks scrollable */
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
 .task-box {
   position: relative;
-  width: 290px;px;
+  width: 100%;
   height: 200px;
+  background-color: #68BA81;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .task-image {
-  width:100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
@@ -127,10 +113,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Space between buttons */
+  gap: 10px;
 }
 
-.complete-btn, .upload-btn, .task-btn{
+.complete-btn, .upload-btn, .task-btn {
   width: 120px;
   padding: 8px 12px;
   font-size: 14px;
@@ -143,7 +129,7 @@ body {
   transition: 0.3s;
 }
 
-.complete-btn:hover, .upload-btn:hover , .task-btn:hover{
+.complete-btn:hover, .upload-btn:hover, .task-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
 }
@@ -151,74 +137,41 @@ body {
 .task-box:hover {
   transform: scale(1.05);
 }
-.leaderboard {
-  position: fixed;
-  margin: 5px;
-  top: 90px;
-  right: 0;
-  bottom: 0;
-  width: 28%;
-  padding: 20px;
+
+/* Earth Container */
+.earth-container {
+  width: 30%;
   background-color: #439cae;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;
-}
-
-.leaderboard h3 {
-  text-align: center;
-  color: #fff;
-  font-size: 24px;
-  margin-top: 0;
-  padding-bottom: 20px;
-  font-weight: bold;
-  background-color: #1a4f4c;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.leaderboard ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Leaderboard list item styling */
-.leaderboard ul li {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #e0f7fa;
-  border-radius: 8px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0px;
 }
 
-/* Hover effect on leaderboard list item */
-.leaderboard ul li:hover {
-  transform: scale(1.05);
-}
-
-/* Avatar inside leaderboard list items */
-.leaderboard .avatar {
-  width: 40px;
-  height: 40px;
+#earth-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 50%;
-  margin-right: 10px;
-  object-fit: cover;
+  animation: pulse 3s infinite ease-in-out;
 }
 
-/* Styling for name and score in leaderboard */
-.leaderboard .name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin-right: 200px;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-.leaderboard .score {
-  font-size: 14px;
-  color: #555;
+#earth-content {
+  width: 80%;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }

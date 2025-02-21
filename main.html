@@ -7,66 +7,45 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="navbar">
-        <h2 class="welcome-text">Welcome back , Captain Green!</h2>
-        <div class="threecircles">
-            <div id="completed-tasks-count"> <h2>0</h2></div>
-        <div class="circle">
-            <img class="profile" src="https://i.pinimg.com/736x/9c/10/fe/9c10fe485282089ceea5c1075af558e7.jpg" alt="profile-avatar">
-        </div>
-        <div class="circle">
-            <img class="profile" src="esslogo.jpeg" alt="ess">
-        </div>
-        <div class="circle">
-            <img class="profile" src="https://i.pinimg.com/736x/f3/e4/65/f3e46591fc3cd061e7bcc55dad12958d.jpg" alt="">
-        </div>
-        </div>
-      </div>
-      
-  
-  <div class="container">
-    <div class="tasks">
-        
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2 class="welcome-text">Welcome back, Captain Green!</h2>
+    <div class="threecircles">
+      <div id="completed-tasks-count"><h2>0</h2></div>
+      <button class="circle" onclick="location.href='profile.html'">
+        <img class="profile" src="https://i.pinimg.com/736x/9c/10/fe/9c10fe485282089ceea5c1075af558e7.jpg" alt="profile-avatar">
+      </button>
+      <button class="circle" onclick="location.href='earthbase.html'">
+        <img class="profile" src="esslogo.jpeg" alt="ess">
+      </button>
+      <button class="circle" onclick="location.href='story.html'">
+        <img class="profile" src="https://i.pinimg.com/736x/f3/e4/65/f3e46591fc3cd061e7bcc55dad12958d.jpg" alt="">
+      </button>
     </div>
-          
-    </div>
-    <div class="leaderboard">
-        <h3>Leaderboard</h3>
-        <ul>
-            <li>
-                <img src="avatar1.jpg" alt="Avatar 1" class="avatar">
-                <span class="name">Kavya</span>
-                <span class="score">1500</span>
-            </li>
-            <li>
-                <img src="avatar2.jpg" alt="Avatar 2" class="avatar">
-                <span class="name">Renisha</span>
-                <span class="score">1300</span>
-            </li>
-            <li>
-                <img src="avatar3.jpg" alt="Avatar 3" class="avatar">
-                <span class="name">Harish</span>
-                <span class="score">1200</span>
-            </li>
-            <li>
-                <img src="avatar1.jpg" alt="Avatar 1" class="avatar">
-                <span class="name">Kavya</span>
-                <span class="score">1500</span>
-            </li>
-            <li>
-                <img src="avatar2.jpg" alt="Avatar 2" class="avatar">
-                <span class="name">Renisha</span>
-                <span class="score">1300</span>
-            </li>
-            <li>
-                <img src="avatar3.jpg" alt="Avatar 3" class="avatar">
-                <span class="name">Harish</span>
-                <span class="score">1200</span>
-            </li>
-        </ul>
-    </div>
-    
   </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Tasks Section -->
+    <div class="tasks-container">
+      <div class="tasks">
+        <!-- Tasks will be dynamically added here -->
+      </div>
+    </div>
+
+    <!-- Earth Section -->
+    <div class="earth-container">
+      <div id="earth-image">
+        <img src="earth1.png" alt="Polluted Earth">
+      </div>
+      <p id="earth-content">
+        The Earth is feeling sick! 🌍💨 The air is filled with smoke, the rivers are dirty, 
+        and the trees are disappearing. We need to help the planet heal by planting trees, 
+        saving water, and keeping our surroundings clean! 🌱💚
+      </p>
+    </div>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>

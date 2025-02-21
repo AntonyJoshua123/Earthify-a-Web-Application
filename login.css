@@ -10,24 +10,26 @@ body, html {
 }
 
 .background {
-    background-image: url('2535124.png'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
+    position: relative;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Ensures the ::before pseudo-element stays within the .background */
 }
 
-.container {
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 400px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 30px;
-    border-radius: 20px; /* More rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden; /* To contain pseudo-elements */
+    height: 100%;
+    background-image: url('2535124.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust this value to make the background image lightly visible */
+    z-index: -1; /* Ensure the background image stays behind the content */
 }
 
 
@@ -52,6 +54,7 @@ body, html {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    gap: 10px; /* Added gap between login and sign-up toggle buttons */
 }
 
 .tab-btn {
@@ -75,7 +78,7 @@ body, html {
 
 form input {
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* Increased padding */
     margin: 10px 0;
     border-radius: 10px; /* Rounded input fields */
     border: 1px solid #68BA81; /* Silver Tree */
@@ -88,7 +91,7 @@ form input:focus {
 
 form button {
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* Increased padding */
     background-color: #1A4F4C; /* Blue Dianne */
     color: white;
     border: none;

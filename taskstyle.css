@@ -1,0 +1,101 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 170;
+    color: #B8E192;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.curved-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    height: 90%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border: 5px solid #68BA81;
+    animation: bounceIn 1s ease;
+    background-color: #1A4F4C;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 2px 2px #439CAE;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    animation: slideInLeft 0.5s ease;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    flex: 1;
+    font-size: 1.5em;
+    line-height: 1.5;
+    background-color: rgba(184, 255, 146, 0.9);
+    color: #1A4F4C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.8s ease; /* Increased animation duration for a smoother effect */
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}

@@ -11,8 +11,8 @@
         <div class="container">
             <div class="form-container">
                 <div class="tabs">
-                    <button class="tab-btn" onclick="window.location.href='login.html'">Login</button>
-                    <button class="tab-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                    <button class="tab-btn" onclick="showLogin()">Login</button>
+                    <button class="tab-btn" onclick="showSignUp()">Sign Up</button>
                 </div>
 
                 <!-- Login Form -->
@@ -20,7 +20,7 @@
                     <h2>Login</h2>
                     <form>
                         <input type="text" id="username" placeholder="Username" required><br>
-                        <input type="password" id="password"placeholder="Password" required><br>
+                        <input type="password" id="password" placeholder="Password" required><br>
                         <button type="submit">Login</button>
                     </form>
                 </div>
@@ -40,14 +40,17 @@
         </div>
     </div>
 
-    
-   
+    <script>
+        function showLogin() {
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("signup-form").style.display = "none";
+        }
+
+        function showSignUp() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("signup-form").style.display = "block";
+        }
+    </script>
+
     <script type="module" src="login.js" defer></script>
-        
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"></script>
-   
-    
-</body>
-</html>
+    <script type="module" src="https://www.gstatic.com/firebasejs/

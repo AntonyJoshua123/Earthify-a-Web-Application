@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #439CAE; /* Boston Blue */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #439CAE; /* Boston Blue */
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #1A4F4C; /* Blue Dianne */
+}
+
+.username {
+    font-size: 1.2em;
+    color: #68BA81; /* Silver Tree */
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1em;
+    color: #1A4F4C; /* Blue Dianne */
+    background-color: #B8E192; /* Feijoa */
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 1.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
