@@ -40,10 +40,10 @@ header h1 {
 }
 
 /* Story Section */
-.story-section {
+/*.story-section {
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: rgba(21, 85, 41, 0.3); /* Light teal background with 60% opacity */
+    background-color: rgba(21, 85, 41, 0.3); /* Light teal background with 60% opacity 
     padding: 15px;
     border-radius: 10px;
 }
@@ -51,13 +51,13 @@ header h1 {
 
 
 .story-section h2 {
-    color: #cadfaf; /* Darker green */
+    color: #cadfaf; /* Darker gr
 }
 
 .story-section p {
     font-size: 18px;
     line-height: 1.6;
-}
+}*/
 
 /* Facts Section */
 /* Facts Section */
@@ -286,6 +286,68 @@ body {
     text-align: center;
     margin: 20px 0;
   }
-  
-  
-  
+ /* Story Section */
+.story-section {
+    margin: 40px 0;
+    background-color: rgba(21, 85, 41, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Story Images Container */
+.story-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each image-text pair */
+}
+
+/* Each Image + Text Block */
+.story-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto; /* Prevents shrinking */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Content Cloud (Text Bubble) */
+.content-cloud {
+    margin-top: 10px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #2d6a4f;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Paragraph - Right Side */
+.story-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e3ede9;
+    text-align: left;
+}
+

@@ -13,4 +13,5 @@ function checkAnswers() {
     }
     
         if (q2Answer === "reduce waste" || q2Answer === "recycle" ||)
+        }
         
