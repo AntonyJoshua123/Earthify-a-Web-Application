@@ -49,13 +49,15 @@ if (tasksContainer) {
             const buttonContainer = document.createElement("div");
             buttonContainer.classList.add("button-container");
 
-            // **New Task Button**
+            // **New Task Button (Opens a unique page per task)**
             const taskBtn = document.createElement("button");
             taskBtn.textContent = "Task";
             taskBtn.classList.add("task-btn");
 
+            const taskPageURL = `taskPage${count + 1}.html`; // Unique page per task
+
             taskBtn.addEventListener("click", () => {
-                window.open("taskPage.html", "_blank", "width=600,height=600");
+                window.open(taskPageURL, "_blank", "width=600,height=600");
             });
 
             const completeBtn = document.createElement("button");
@@ -104,7 +106,7 @@ if (tasksContainer) {
             taskBox.appendChild(buttonContainer);
 
             tasksContainer.appendChild(taskBox);
-            console.log(`Task ${count + 1} added`); // Debugging
+            console.log(`Task ${count + 1} added with link to ${taskPageURL}`); // Debugging
 
             count++;
         }
