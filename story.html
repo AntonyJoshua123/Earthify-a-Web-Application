@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Earth: Awareness</title>
+    <link rel="stylesheet" href="story.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Save the Earth: A Green Future</h1>
+        </header>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="video-container">
+                <h2>Watch the Video</h2>
+                <section id="video-section">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lJToF8D9bdU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                </section>
+                <!--<video width="600" controls>
+                    <source src="https://youtu.be/A8IS09dbI6s?si=NmrXtS_NzYVHQQX5" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>-->
+            </div>
+        </section>
+        
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2>The Impact of Pollution</h2>
+            <p>Our beautiful Earth is facing the consequences of pollution. Plastic waste, air pollution, and deforestation are harming the planet. Learn how these changes affect nature and what we can do to stop them!</p>
+        </section>
+        
+        <!-- Facts Section below Story Section -->
+        <section class="facts-section">
+            <div class="facts-container">
+                <h3>Important Facts about Earth</h3>
+                <div class="fact">
+                    <img src="login1.png" alt="Earth Fact 1">
+                    <p>The Earth is the only planet known to support life.</p>
+                </div>
+                <div class="fact">
+                    <img src="back1.jpg" alt="Earth Fact 2">
+                    <p>More than 70% of the Earth's surface is covered in water.</p>
+                </div>
+                <div class="fact">
+                    <img src="back2.jpg" alt="Earth Fact 3">
+                    <p>The average temperature of the Earth is around 15°C (59°F).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pollution and Survival Info Section -->
+        <section class="pollution-section">
+            <div class="pollution-container">
+                <h3>Current State of Earth's Pollution</h3>
+                <img src="back.jpg" alt="Pollution Image" class="pollution-image">
+                <p>Pollution is at a critical level globally, with plastic waste in oceans, air pollution in cities, and deforestation reducing the green cover.</p>
+
+                <h4>How Long Can Earth Survive?</h4>
+                <div class="time-container">
+                    <div class="time-box">
+                        <h5>Before Website's Initiation</h5>
+                        <p>Earth could survive for a few decades at best, with increased pollution leading to more natural disasters, species extinction, and unsustainable living conditions.</p>
+                    </div>
+                    <div class="time-box">
+                        <h5>After Website's Initiation</h5>
+                        <p>If everyone participates in the cause, there is hope for a better, greener Earth. Cutting pollution, recycling, and planting trees can help reverse some of the damage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2>Test Your Knowledge!</h2>
+            <form id="quiz-form">
+                <div class="quiz-question">
+                    <label for="q1">1. What is the main cause of pollution?</label>
+                    <input type="text" id="q1" required>
+                </div>
+                
+                <div class="quiz-question">
+                    <label for="q2">2. Name one thing you can do to reduce pollution.</label>
+                    <input type="text" id="q2" required>
+                </div>
+                
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+            <div id="quiz-result"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

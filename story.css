@@ -1,0 +1,291 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#B1C696; /* Light green background */
+    color: #011009; /* Dark green text */
+    text-align: center;
+}
+
+.container {
+    opacity:1;
+    max-width: 100%; /* Use full width */
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #91AD7F;
+}
+
+/* Video Section */
+.video-section {
+    opacity:1;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.1); /* White background with 60% opacity */
+}
+
+.video-container {
+    width:100%;
+    text-align: center;
+    opacity:1;
+    
+}
+
+/* Story Section */
+.story-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(21, 85, 41, 0.3); /* Light teal background with 60% opacity */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+
+.story-section h2 {
+    color: #cadfaf; /* Darker green */
+}
+
+.story-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Facts Section */
+/* Facts Section */
+.facts-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(21, 85, 41, 0.3); /* Soft green */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Facts Container */
+.facts-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the items evenly */
+    align-items: flex-start; /* Align items to the top */
+    text-align: center;
+    gap: 20px; /* Space between the items */
+    flex-wrap: wrap; /* Allows wrapping in smaller screens */
+}
+
+/* Heading */
+.facts-container h3 {
+    color: #cadfaf;
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 100%; /* Make sure the heading takes up the full width */
+}
+
+/* Fact Style */
+.fact {
+    width: 30%; /* Each fact container will take up 30% of the container's width */
+    text-align: center;
+}
+
+.fact img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fact p {
+    font-size: 16px;
+    color: #edf1ef;
+}
+
+/* Pollution Section */
+.pollution-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color:rgba(21, 85, 41, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pollution-container h3 {
+
+    color: #cadfaf;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pollution-container p {
+    font-size: 16px;
+    color: #eceeed;
+    line-height: 1.6;
+}
+
+.pollution-container h4 {
+    font-size: 20px;
+    color: #cadfaf;
+    margin-top: 20px;
+}
+
+.pollution-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.time-box {
+    width: 45%;
+    background-color:rgba(5, 5, 5, 0.5);;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-box h5 {
+    color: #cadfaf;
+    font-size: 18px;
+}
+
+.time-box p {
+    color: #f0f3f1;
+    font-size: 14px;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background-color:rgba(21, 85, 41, 0.3); /* Soft green */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #e2fce4;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #2d6a4f;
+    border-radius: 5px;
+}
+
+button {
+    background-color:  #1f4d3f;
+    color: #edf2f0;
+    padding: 10px 20px;
+    border-color: #2d6a4f;
+    border-radius: 15px;
+    border-width:  5px;;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #1f4d3f;
+}
+
+/* Quiz Result */
+#quiz-result {
+    margin-top: 20px;
+    font-size: 20px;
+    color:#B8E192;
+    font-weight: bold;
+}
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('back4.jpg'); /* Replace with your image path */
+    background-size: cover;  /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    color: #edebeb; /* Sets the text color to white for better contrast */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, section {
+    padding: 20px;
+  }
+  
+  /* Add styles for other elements as necessary */
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed for the overlay to position correctly */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Adding the background image */
+  body::before {
+    content: ""; /* This creates the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('back4.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Puts the overlay behind all content */
+    opacity: 0.7; /* Set the opacity of the background image here */
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  }
+  
+  /* Other content styles */
+  header, section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: white;
+  }
+  
+  h1, h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  #video-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  
+  
