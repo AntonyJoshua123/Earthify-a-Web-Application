@@ -4,12 +4,10 @@ console.log("Task Container:", tasksContainer); // Debugging
 const completedTasksDisplay = document.getElementById("completed-tasks-count");
 let completedTasks = 0;
 
-// Select existing count span (or create if missing)
-let countSpan = completedTasksDisplay.querySelector(".task-count");
+// Select the existing h2 inside completed-tasks-count
+let countSpan = completedTasksDisplay.querySelector("h2"); 
 if (!countSpan) {
-    countSpan = document.createElement("span");
-    countSpan.classList.add("task-count");
-    completedTasksDisplay.appendChild(countSpan);
+    console.error("Count display (h2) not found in #completed-tasks-count!");
 }
 countSpan.textContent = completedTasks; // Ensure correct display
 
@@ -19,22 +17,15 @@ if (!treeImg) {
     treeImg = document.createElement("img");
     treeImg.src = "tree.png";
     treeImg.alt = "Tree";
-    treeImg.width = 20;
-    treeImg.height = 20;
+    treeImg.width = 40;
+    treeImg.height = 40;
     treeImg.classList.add("tree-img");
     completedTasksDisplay.appendChild(treeImg);
 }
 
-const imageUrls = [
-    "images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg", "images/image5.jpg",
-    "images/image6.jpg", "images/image7.jpg", "images/image8.jpg", "images/image9.jpg", "images/image10.jpg",
-    "images/image11.jpg", "images/image12.jpg", "images/image13.jpg", "images/image14.jpg", "images/image15.jpg",
-    "images/image16.jpg", "images/image17.jpg", "images/image18.jpg", "images/image19.jpg", "images/image20.jpg",
-    "images/image21.jpg", "images/image22.jpg", "images/image23.jpg", "images/image24.jpg", "images/image25.jpg",
-    "images/image26.jpg", "images/image27.jpg", "images/image28.jpg", "images/image29.jpg", "images/image30.jpg"
-];
+const imageUrl = "tasktree.png.jpg"; // Use the same image for all divs
 
-console.log("Image URLs:", imageUrls);
+console.log("Image URL:", imageUrl);
 
 // **Fix: Clear tasks before adding new ones**
 tasksContainer.innerHTML = "";
@@ -44,14 +35,28 @@ if (tasksContainer) {
 
     for (let i = 0; i < 10; i++) { 
         for (let j = 0; j < 3; j++) { 
-            if (count >= imageUrls.length) break;
+            if (count >= 30) break;
 
             const taskBox = document.createElement("div");
             taskBox.classList.add("task-box");
 
             const img = document.createElement("img");
-            img.src = imageUrls[count];
+            img.src = imageUrl;
             img.alt = `Task Image ${count + 1}`;
+            img.classList.add("task-image");
+
+            // **Button container for positioning**
+            const buttonContainer = document.createElement("div");
+            buttonContainer.classList.add("button-container");
+
+            // **New Task Button**
+            const taskBtn = document.createElement("button");
+            taskBtn.textContent = "Task";
+            taskBtn.classList.add("task-btn");
+
+            taskBtn.addEventListener("click", () => {
+                window.open("taskPage.html", "_blank", "width=600,height=600");
+            });
 
             const completeBtn = document.createElement("button");
             completeBtn.textContent = "Task Completed";
@@ -63,7 +68,7 @@ if (tasksContainer) {
                     completeBtn.classList.add("completed");
                     completeBtn.textContent = "✅ Done ";
                     completeBtn.style.backgroundColor = "#4CAF50";
-                    countSpan.textContent = `${completedTasks}`;  // **Update count**
+                    countSpan.textContent = completedTasks; // Fix: updates h2 text correctly
                 }
             });
 
@@ -89,9 +94,14 @@ if (tasksContainer) {
                 });
             });
 
+            // Append buttons inside container
+            buttonContainer.appendChild(taskBtn);
+            buttonContainer.appendChild(completeBtn);
+            buttonContainer.appendChild(uploadBtn);
+
+            // Append elements to task box
             taskBox.appendChild(img);
-            taskBox.appendChild(completeBtn);
-            taskBox.appendChild(uploadBtn);
+            taskBox.appendChild(buttonContainer);
 
             tasksContainer.appendChild(taskBox);
             console.log(`Task ${count + 1} added`); // Debugging
