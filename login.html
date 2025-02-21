@@ -4,122 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(120deg, #2980b9, #8e44ad);
-        }
-
-        .login-container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        #login-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .input-group {
-            position: relative;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            outline: none;
-            transition: border-color 0.3s;
-            font-size: 16px;
-        }
-
-        .input-group input:focus {
-            border-color: #2980b9;
-        }
-
-        button {
-            background: #2980b9;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: #2471a3;
-        }
-
-        .signup-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .signup-link a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-
-        .signup-link a:hover {
-            text-decoration: underline;
-        }
-
-        .error-message {
-            color: #e74c3c;
-            text-align: center;
-            margin-top: 10px;
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Welcome Back</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Username" required>
+    <div class="background">
+        <div class="container">
+            <div class="form-container">
+                <div class="tabs">
+                    <button class="tab-btn" onclick="window.location.href='login.html'">Login</button>
+                    <button class="tab-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="login-form" class="form">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="text" id="username" placeholder="Username" required><br>
+                        <input type="password" id="password"placeholder="Password" required><br>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div id="signup-form" class="form" style="display:none;">
+                    <h2>Sign Up</h2>
+                    <form>
+                        <input type="text" placeholder="Username" required><br>
+                        <input type="email" placeholder="Email" required><br>
+                        <input type="password" placeholder="Password" required><br>
+                        <input type="password" placeholder="Confirm Password" required><br>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
             </div>
-            <div class="input-group">
-                <input type="password" id="password" placeholder="Password" required>
-            </div>
-            <button type="submit">Login</button>
-            <div class="error-message" id="error-message"></div>
-        </form>
-        <div class="signup-link">
-            Don't have an account? <a href="signup.html">Sign up</a>
         </div>
     </div>
 
-    <!-- Firebase SDK -->
+    
+   
+    <script type="module" src="login.js" defer></script>
+        
     <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"></script>
+   
     
-    <!-- Your login script -->
-    <script type="module" src="login.js"></script>
 </body>
 </html>

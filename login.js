@@ -6,7 +6,7 @@ import { getDatabase, ref, get, query, orderByChild, equalTo, update, serverTime
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apikey:  process.env.FIREBASE_API_KEY2,
+    apiKey: "AIzaSyDDYp7vmd_cz0YObFTI9rlOgHkh9m93GXo",
     authDomain: "login-page-15ae5.firebaseapp.com",
     databaseURL: "https://login-page-15ae5-default-rtdb.firebaseio.com",
     projectId: "login-page-15ae5",
@@ -56,7 +56,7 @@ loginForm.addEventListener("submit", async function(event) {
             lastLogin: serverTimestamp()
         });
         
-        alert("Logged in successfully!");
+       
         window.location.href = "main.html"; // Redirect to main page
         
     } catch (error) {
